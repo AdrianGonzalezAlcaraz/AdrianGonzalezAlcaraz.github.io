@@ -54,27 +54,7 @@ const posts = (await getCollection("blog"))?.sort(
     
       <div class="flex flex-col gap-4">
         {
-          posts?.slice(0, 3).map((post) => (
-            // <a
-            //   class="text-sm md:text-base decoration-none flex justify-between"
-            //   href={`/blog/${post.id}`}
-            // >
-            <div class="list-none w-full text-neutral-100 hover:text-neutral-400 ease-in-out transition-colors border-b-neutral-400 border-dashed border-b-1 my-0">
-              <p class="inline-block whitespace-nowrap text-xs">
-                {post.data.title}
-              </p>
-              {post.data.pubDate && (
-                <time
-                  class="text-right tabular-nums text-xs"
-                  datetime={post.data.pubDate.toISOString()}
-                  data-date={post.data.pubDate.toISOString()}
-                >
-                  {formatDate(post.data.pubDate)}
-                </time>
-              )}
-            </div>
-            // </a>
-          ))
+          
         }
       </div>
     </Card>
